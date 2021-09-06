@@ -13,3 +13,9 @@ Hobbyer: Sying, perling, spille gitar, spille sims
 ## Telf: 46898858 <br>
 ## Mail: Stiants@uia.no <br>
 ## Hobbyer: Fotball, venner og uteaktiviteter <br>
+
+# Eirik Skogland Nedland
+ 04.09.00
+ Universitetet i Agder
+ Tlf: 90808081
+ Mail: *eiriksnedland@gmail.com*
