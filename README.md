@@ -8,11 +8,11 @@ Eziz Ømer
 **Hobbyer:** Sying, perling, spille gitar, spille sims 
 
 # Stian Steinsland
-## 01.09.02 <br>
-## Universitetet i Agder (Kristiansand) <br>
-## Telf: 46898858 <br>
-## Mail: Stiants@uia.no <br>
-## Hobbyer: Fotball, venner og uteaktiviteter <br>
+01.09.02 <br>
+Universitetet i Agder (Kristiansand) <br>
+Telf: 46898858 <br>
+Mail: Stiants@uia.no <br>
+Hobbyer: Fotball, venner og uteaktiviteter <br>
 
 
 # Eirik Skogland Nedland
