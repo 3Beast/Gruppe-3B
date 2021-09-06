@@ -14,6 +14,7 @@ Eziz Ømer
 ## Mail: Stiants@uia.no <br>
 ## Hobbyer: Fotball, venner og uteaktiviteter <br>
 
+
 # Eirik Skogland Nedland
 <br>04.09.00
  <br>Universitetet i Agder
