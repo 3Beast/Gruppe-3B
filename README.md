@@ -1,6 +1,7 @@
 # Gruppe-3B - Våre Repositories
 
 3B - Visittkort
+
 <img src="https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/Businessmannen.png" alt="Eziz visittkort" width="500"/>
 
 ## Silje Elise Strøm
