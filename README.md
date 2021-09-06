@@ -16,7 +16,7 @@ Eziz Ømer
 
 
 # Eirik Skogland Nedland
-<br>04.09.00
+04.09.00
  <br>Universitetet i Agder
  <br>Tlf: 90808081
  <br>Mail: *eiriksnedland@gmail.com*
