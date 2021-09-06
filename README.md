@@ -6,3 +6,5 @@ Silje Elise Strøm
 Asbjørn Håland Hestnes
 
 Stian Steinsland
+
+Eirik Skogland Nedland
