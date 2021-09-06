@@ -5,7 +5,7 @@ Silje Elise Strøm
 
 Asbjørn Håland Hestnes
 
-#Stian Steinsland
+# Stian Steinsland
 ## 01.09.02
 ## Universitetet i Agder (Kristiansand)
 ## Telf: 46898858
