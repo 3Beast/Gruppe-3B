@@ -2,9 +2,9 @@
 Eziz Ømer
 
 ## Silje Elise Strøm
-**Studerer på:** UiA Kristiansand <br>
-**Født i:** 2002 <br>
-**Kommer fra:** Kristiansand <br>
+**Født:** 05.12.2002 <br>
+**Studerer ved:** Universitetet i Agder <br>
+**Tlf:** 48103000<br>
 **Mail:** silje@smileycom.com <br>
 **Hobbyer:** Sying, perling, lufte katten og spille sims 
 
