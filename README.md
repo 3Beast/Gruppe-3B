@@ -1,5 +1,5 @@
 # Gruppe-3B
-Eziz Ømer
+<img src="https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/Businessmannen.png" alt="Eziz visittkort" width="500"/>
 
 ## Silje Elise Strøm
 **Født:** 05.12.2002 <br>
@@ -19,7 +19,6 @@ Hobbyer: Fotball, venner og uteaktiviteter <br>
 08.06.1995 <br>
 UiA, campus Kristiansand <br>
 Hobbyer: Teater, sang, male <br>
-
 
 # Eirik Skogland Nedland
 04.09.00
