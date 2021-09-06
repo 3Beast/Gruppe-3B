@@ -5,7 +5,8 @@ Eziz Ømer
 **Studerer på:** UiA Kristiansand <br>
 **Født i:** 2002 <br>
 **Kommer fra:** Kristiansand <br>
-**Hobbyer:** Sying, perling, spille gitar, spille sims 
+**Mail:** silje@smileycom.com <br>
+**Hobbyer:** Sying, perling, lufte katten og spille sims 
 
 # Stian Steinsland
 01.09.02 <br>
