@@ -30,6 +30,6 @@ Hobbyer: Teater, sang, male <br>
 |   |   | Tonje                                                                 |          |        |
 |---|---|-----------------------------------------------------------------------|----------|--------|
 |   |   | Markseth                                                              |          |        |
-|  ![Profile picture](https://cdn-icons-png.flaticon.com/512/1144/1144760.png) |   | 26                                                                    | Søndeled | 172    |
-|   |   | Age                                                                   | From     | Height |
+|  ![Profile picture](https://cdn-icons-png.flaticon.com/512/1144/1144760.png) |   | 26                                                                    | Søndeled |   |
+|   |   | Age                                                                   | From     |        |
 |   |   | Reading, watching tv-shows and movies, 3D puzzles, games and sleeping |          |        |
