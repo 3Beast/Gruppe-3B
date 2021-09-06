@@ -29,9 +29,4 @@ Hobbyer: Teater, sang, male <br>
  <br>Tlf: 90808081
  <br>Mail: *eiriksnedland@gmail.com*
  
-|   |   | Tonje                                                                 |          |        |
-|---|---|-----------------------------------------------------------------------|----------|--------|
-|   |   | Markseth                                                              |          |        |
-|  ![Profile picture](https://cdn-icons-png.flaticon.com/512/1144/1144760.png) |   | 26                                                                    | Søndeled | 172    |
-|   |   | Age                                                                   | From     | Height |
-|   |   | Reading, watching tv-shows and movies, 3D puzzles, games and sleeping |          |        |
+![Visittkort Tonje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/VisittkortTonje.png)
