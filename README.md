@@ -1,5 +1,8 @@
-# Gruppe-3B - Våre repositories
-Eziz Ømer
+# Gruppe-3B - Våre Repositories
+
+# 3B - Visittkort
+
+<img src="https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/Businessmannen.png" alt="Eziz visittkort" width="500"/>
 
 ## Silje Elise Strøm
 **Født:** 05.12.2002 <br>
@@ -20,7 +23,6 @@ Hobbyer: Fotball, venner og uteaktiviteter <br>
 UiA, campus Kristiansand <br>
 Hobbyer: Teater, sang, male <br>
 
-
 # Eirik Skogland Nedland
 04.09.00
  <br>Universitetet i Agder
@@ -30,6 +32,6 @@ Hobbyer: Teater, sang, male <br>
 |   |   | Tonje                                                                 |          |        |
 |---|---|-----------------------------------------------------------------------|----------|--------|
 |   |   | Markseth                                                              |          |        |
-|  ![Profile picture](https://cdn-icons-png.flaticon.com/512/1144/1144760.png) |   | 26                                                                    | Søndeled |   |
-|   |   | Age                                                                   | From     |        |
+|  ![Profile picture](https://cdn-icons-png.flaticon.com/512/1144/1144760.png) |   | 26                                                                    | Søndeled | 172    |
+|   |   | Age                                                                   | From     | Height |
 |   |   | Reading, watching tv-shows and movies, 3D puzzles, games and sleeping |          |        |
