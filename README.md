@@ -18,11 +18,7 @@ Hobbyer: Fotball, venner og uteaktiviteter <br>
 UiA, campus Kristiansand <br>
 Hobbyer: Teater, sang, male <br>
 
-# Eirik Skogland Nedland
-04.09.00
- <br>Universitetet i Agder
- <br>Tlf: 90808081
- <br>Mail: *eiriksnedland@gmail.com*
+![Visittkort Eirik](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visitkortesn.png)
  
 ![Visittkort Tonje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/VisittkortTonje.png)
 
