@@ -4,12 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/Businessmannen.png" alt="Eziz visittkort" width="500"/>
 
-## Silje Elise Strøm
-**Født:** 05.12.2002 <br>
-**Studerer ved:** Universitetet i Agder <br>
-**Tlf:** 48103000<br>
-**Mail:** silje@smileycom.com <br>
-**Hobbyer:** Sying, perling, lufte katten og spille sims 
+![visittkort silje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visittkort%20silje.png)
 
 # Stian Steinsland
 01.09.02 <br>
