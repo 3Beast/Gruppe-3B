@@ -13,10 +13,7 @@ Telf: 46898858 <br>
 Mail: Stiants@uia.no <br>
 Hobbyer: Fotball, venner og uteaktiviteter <br>
 
-## Helene Louise Ludvigsen
-08.06.1995 <br>
-UiA, campus Kristiansand <br>
-Hobbyer: Teater, sang, male <br>
+![Visittkort Helene](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/helenevisittkort.png)
 
 ![Visittkort Eirik](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visitkortesn.png)
  
