@@ -30,3 +30,5 @@ Hobbyer: Teater, sang, male <br>
  <br>Mail: *eiriksnedland@gmail.com*
  
 ![Visittkort Tonje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/VisittkortTonje.png)
+
+![Visittkort_Asbjørn](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/Visitkortasbj%C3%B8rn.png)
