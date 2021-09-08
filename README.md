@@ -6,12 +6,7 @@
 
 ![visittkort silje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visittkort%20silje.png)
 
-# Stian Steinsland
-01.09.02 <br>
-Universitetet i Agder (Kristiansand) <br>
-Telf: 46898858 <br>
-Mail: Stiants@uia.no <br>
-Hobbyer: Fotball, venner og uteaktiviteter <br>
+![visittkort Stian]
 
 ![Visittkort Helene](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/helenevisittkort.png)
 
