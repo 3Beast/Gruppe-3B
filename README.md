@@ -6,7 +6,7 @@
 
 ![visittkort silje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visittkort%20silje.png)
 
-![visittkort Stian](https://user-images.githubusercontent.com/89386122/132565861-ae9b8eed-cafc-49ee-b084-4bbf753e0847.png)
+![visittkort Stian](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/Visittkort-Stian.png)
 
 ![Visittkort Helene](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/helenevisittkort.png)
 
