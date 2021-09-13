@@ -15,3 +15,5 @@
 ![Visittkort Tonje](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visittkort/VisittkortTonje.png)
 
 ![Visittkort_Asbjørn](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visittkort/Visitkortasbj%C3%B8rn.png)
+
+![visittkort_Frida](https://raw.githubusercontent.com/3Beast/Gruppe-3B/main/visittkort/visittkortFrida.png)
