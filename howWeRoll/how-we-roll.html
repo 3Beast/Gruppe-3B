@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How We Roll</title>
+
+    <style>
+        .Sidetittel {
+            font-family: "Times New Roman";
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width:400px;
+            height:15px;
+            background:#6f82a1;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width:20px;
+            height:20px;
+            background:#dee3d5;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p class="Sidetittel"><b>Gruppe 3B parametere</b></p>
+        <p><label for="navnFor">Fornavn</label>
+            <input type="text" id="navnFor" /></p>
+
+        <p><label for="navnEtter">Etternavn</label>
+            <input type="text" id="navnEtter" /></p>
+
+        <p><label for="epost">E-Post</label>
+            <input type="text" id="epost" /></p>
+
+        <p><label for="studie">Studieretning</label>
+            <input type="text" id="studie" /></p>
+<p>
+    <!-- dorn - day or night -->
+    <label for="dorn">Morgenfugl</label>
+    <input class="slider" type="range" min="0" max="10" id="dorn" name="dorn" value="0">
+    <label for="dorn">Nattugle</label>
+</p>
+
+<p>
+    <!-- tora - teamwork or alone -->
+    <label for="tora">Teamwork</label>
+    <input class="slider" type="range" min="0" max="10" id="tora" name="tora" value="0">
+    <label for="tora">Jobbe alene</label>
+</p>
+
+        <p>
+            <!-- sons - schedule or no schedule -->
+            <label for="sons">08-16</label>
+            <input class="slider" type="range" min="0" max="10" id="sons" name="sons" value="0">
+            <label for="sons">Jeg har ikke timeplan</label>
+        </p>
+
+        <p>
+            <!-- tontf - timeframe or no timeframe -->
+            <label for="tontf">Jobbe innenfor tidsplan</label>
+            <input class="slider" type="range" min="0" max="10" id="tontf" name="tontf" value="0">
+            <label for="tontf">Jeg kan jobbe når som helst</label>
+        </p>
+        <button id="lagre" type="button">Send inn</button>
+    </form>
+    <div class="results">
+        <h4>Datainnsamling</h4>
+        <pre></pre>
+    </div>
+
+<script>
+
+    let btn = document.getElementById("lagre");
+    btn.addEventListener("click",lagre);
+    function lagre() {
+
+        let dorn = document.getElementById("dorn").value;
+        console.log("dorn" + dorn);
+        let tora = document.getElementById("tora").value;
+        console.log("tora" + tora);
+        let sons = document.getElementById("sons").value;
+        console.log("sons" + sons);
+        let tontf = document.getElementById("tontf").value;
+        console.log("tontf" + tontf);
+
+    }
+</script>
+</body>
+</html>
