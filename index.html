@@ -11,6 +11,7 @@
       width: 400px;
       height: 200px;
       border: 2px solid black;
+      background-color: darkolivegreen;
     }
 
     .input1{
@@ -28,16 +29,64 @@
 
     .logo {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 5px;
+      top: 5px;
       width: 100px;
       height: 50px;
 
+    }
+    .main{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(to left, midnightblue, navajowhite);
+    }
+    nav{
+      width: 80%;
+      position: sticky;
+      margin:20px auto;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+    .maintitle{
+      flex-basis: 20%;
+      color: aliceblue;
+      text-decoration: none;
+    }
+    .nav-links{
+      flex:1;
+      text-align: right;
+    }
+    .nav-links ul li{
+      list-style: none;
+      display: inline-flex;
+      margin: 0 30px;
+    }
+    .nav-links ul li a{
+      color: aliceblue;
+      text-decoration: none;
     }
   </style>
   <title>Title</title>
 </head>
 <body>
+      <div class="main">
+        <nav>
+             <div class="maintitle">
+               <h1><a href="https://3beast.github.io/Gruppe-3B/">GRUPPE 3B</a></h1>
+             </div>
+             <div class="nav-links">
+                  <ul>
+                      <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
+                      <li><a href="#">Visittkort</a></li>
+                      <li><a href="howWeRoll/how-we-roll.html">How We Roll</a></li>
+                      <li><a href="howWeRoll/hwr-report.html">HWR Report</a></li>
+                  </ul>
+             </div>
+        </nav>
+
+      <!--- Dette er visittkortene til gruppe 3B -->
   <div class="card">
   <div class="input1">Universitetet i Agder</div>
   <div class="input2">IT og Informasjonssystemer</div>
@@ -110,13 +159,6 @@
     <div class="input3">Mobil: <i>97655523</i></div>
     <img src="img/uia.png" class="logo">
 </div>
-  <a href="https://github.com/3Beast/Gruppe-3B"> Hovedrepository
-  </a>
-
-  <a href="howWeRoll/how-we-roll.html"> How We Roll
-  </a>
-
-  <a href="howWeRoll/hwr-report.html"> HWR Report
-  </a>
+      </div>
 </body>
 </html>
