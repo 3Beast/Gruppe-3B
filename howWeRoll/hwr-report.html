@@ -56,6 +56,43 @@
             flex:1;
             text-align: right;
         }
+        #pref{
+            width: 100%;
+            height: max-content;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #who {
+            display: inline-flex;
+            font-size: 1.2em;
+            width: 100%;
+            position: absolute;
+            height: 1.5em;
+        }
+
+        .circel {
+            width: 20px;
+            height: 20px;
+            border: solid black 2px;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-left: 5px;
+        }
+
+        @media only screen and (max-width: 700px) {
+
+            .nav-links ul{
+                width: 100%;
+                position: absolute;
+                top: 75px;
+                right: 0;
+                z-index: 2;
+            }
+
+
+        }
+
 
 
     </style>
@@ -74,7 +111,9 @@
                 <li><a href="hwr-report.html">Preferanser</a></li>
             </ul>
         </div>
+
     </nav>
+
 </div>
 <div id="who">
     Asbjørn<div style="background: red;" class="circel"></div>
@@ -93,7 +132,7 @@
         let cnv = document.getElementById("cnv"); //henter canvas ifra html
         let ctx = cnv.getContext("2d"); // sier at jeg skal tegne i 2d
 
-        ctx.beginPath(); //starter tegner linjer og tekst
+        ctx.beginPath(); //start tegner linjer og tekst
         ctx.font = "1em Arial"; //font og tekststørrelse
         ctx.moveTo(100,250); //linje start
         ctx.lineTo(500,250);//linje slutt
@@ -109,7 +148,29 @@
         ctx.lineTo(500,350);
         ctx.fillText("placeholder5",0,350);
         ctx.fillText("placeholder6",500,350);
-        ctx.stroke(); //ferdig å tegne
+        ctx.stroke(); //ferdig tegne
+
+        fetch("https://bacit.info/hwr/20210930122803-acab32e2bc7b6330f92b78c8dbf91b68.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data) //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
     </script>
 
 </body>
