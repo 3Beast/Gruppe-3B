@@ -4,26 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Preferanser</title>
+    <title>Gruppe 3B - Preferanser</title>
     <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+            font-family: "Century Gothic", sans-serif;
+        }
         .main{
             width: 100%;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(to left, midnightblue, navajowhite);
+            background: whitesmoke;
+            text-align: center;
         }
-        nav{
-            width: 80%;
-            position: sticky;
-            margin:20px auto;
-            z-index: 1;
-            display: flex;
-            align-items: center;
+        nav {
+            flex: 1;
+            text-align: right;
         }
-        .hovedside{
-            flex-basis: 20%;
-            color: aliceblue;
-            text-decoration: none;
+            nav ul li{
+                list-style: none;
+            display: inline-block;
+                margin-right: 30px;
+            }
+            nav ul li a{
+                color: black;
+                font-size: 20px;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                background: white;
+                text-shadow: lightgray;
+                height: 10px;
+                border: solid black 2px;
+
+            }
+        a:active {
+            background: blue;
+        }
+
+        .hovedside {
+            margin-left: 30px;
+            position: absolute;
+            background: none;
+            color: black;
+            font-size: 30px;
         }
         .nav-links{
             flex:1;
@@ -40,16 +67,28 @@
             <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
         </div>
         <div class="nav-links">
-                <a href="https://github.com/3Beast/Gruppe-3B">Repository</a>
-                <a href="/index.html">Visittkort</a>
-                <a href="how-we-roll.html">How We Roll</a>
-                <a href="hwr-report.html">HWR Report</a>
+            <ul>
+                <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
+                <li><a href="/index.html">Visittkort</a></li>
+                <li><a href="how-we-roll.html">Registrer</a></li>
+                <li><a href="hwr-report.html">Preferanser</a></li>
+            </ul>
         </div>
     </nav>
 </div>
-<canvas id="cnv" width="1000px" height="500px">
-
-</canvas>
+<div id="who">
+    Asbjørn<div style="background: red;" class="circel"></div>
+    Eirik<div style="background: darkcyan;" class="circel"></div>
+    Eziz<div style="background: green;" class="circel"></div>
+    Frida<div style="background: yellow;" class="circel"></div>
+    Helene<div style="background: orange;" class="circel"></div>
+    Silje<div style="background: purple;" class="circel"></div>
+    Stian<div style="background: darkblue;" class="circel"></div>
+    Tonje<div style="background: pink;" class="circel"></div>
+</div>
+<div id="pref">
+    <canvas id="cnv" width="1000px" height="500px"></canvas>
+</div>
     <script>
         let cnv = document.getElementById("cnv"); //henter canvas ifra html
         let ctx = cnv.getContext("2d"); // sier at jeg skal tegne i 2d
