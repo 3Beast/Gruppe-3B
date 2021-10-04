@@ -1,219 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How We Roll</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How We Roll</title>
 
-    <style>
-        body {
-            margin: 0 auto;
-            padding: 0;
-            font-family: "Century Gothic", sans-serif;
-        }
-        .main{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            background: whitesmoke;
-            text-align: center;
-        }
-
-
-        nav {
-            flex: 1;
-            text-align: right;
-        }
-        nav ul li{
-            list-style: none;
-            display: inline-block;
-            margin-right: 30px;
-        }
-        nav ul li a{
-            color: black;
-            font-size: 20px;
-        }
-        a {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        a:active {
-            border: solid black 2px;
-            text-decoration: none;
-        }
-
-        .hovedside {
-            margin-left: 30px;
-            position: absolute;
-            background: none;
-            font-size: 30px;
-        }
-
-        .hovedside a {
-            color: black;
-        }
-
-        .nav-links{
-            flex:1;
-            text-align: right;
-        }
-        #regpref{
-            width: 100%;
-            height: max-content;
-            padding-top: 50px;
-
-        }
-        form {
-            text-align: center;
-
-        }
-        /*Kode hentet 29.09.2021 fra:https://codepen.io/renaudtertrais/pen/waLXVx */
-        .slider {
-            -webkit-appearance: none;
-            cursor: pointer;
-            height: 0;
-            width: 50%;
-            border-bottom: 2px solid black;
-            background-color: transparent;
-            margin-bottom: 50px;
-            margin-top: 50px;
-        }
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 30px;
-            border: 2px solid black;
-            cursor: pointer;
-        }
-        .slider::-webkit-slider-thumb:hover {
-            -webkit-appearance: none;
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 30px;
-            border: 2px solid #efa964;
-            cursor: pointer;
-
-        }
-
-        #btn {
-            text-align: center;
-            display: inline-block;
-            font-family: "Century Gothic", sans-serif;
-            font-size: 40px;
-            border: 2px solid Black;
-            background-color: transparent;
-            border-radius: 30px;
-            margin-bottom: 100px;
-            width: 330px;
-            height: 92px;
-
-        }
-        #btn:hover {
-            cursor: pointer;
-            border: 2px solid #efa964;
-            color: #efa964;
-        }
-        @media only screen and (max-width: 750px) {
-            #regpref {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+        <style>
+            body {
+                margin: 0 auto;
+                padding: 0;
+                font-family: "Century Gothic", sans-serif;
+            }
+            .main{
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                background: whitesmoke;
                 text-align: center;
-                width: 50%;
             }
-
-
-            .nav-links ul{
-                width: calc(100% - 250px);
+            nav {
+                flex: 1;
+                text-align: right;
+            }
+            nav ul li{
+                list-style: none;
                 display: inline-block;
-                top: 75px;
-                right: 0;
-                z-index: 2;
+                margin-right: 30px;
             }
-        }
-    </style>
-</head>
-<body>
-<div class="main">
-    <nav>
-        <div class="hovedside">
-            <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
+            nav ul li a{
+                color: black;
+                font-size: 20px;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            a:active {
+                border: solid black 2px;
+                text-decoration: none;
+            }
+            .hovedside {
+                margin-left: 30px;
+                position: absolute;
+                background: none;
+                font-size: 30px;
+            }
+            .hovedside a {
+                color: black;
+            }
+
+            .nav-links{
+                flex:1;
+                text-align: right;
+            }
+            #regpref{
+                width: 100%;
+                height: max-content;
+                padding-top: 50px;
+                text-align: center;
+
+            }
+            form {
+                text-align: center;
+
+            }
+            /*Kode hentet 29.09.2021 fra:https://codepen.io/renaudtertrais/pen/waLXVx */
+            .slider {
+                -webkit-appearance: none;
+                cursor: pointer;
+                height: 0;
+                width: 50%;
+                border-bottom: 2px solid black;
+                background-color: transparent;
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 30px;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+            .slider::-webkit-slider-thumb:hover {
+                -webkit-appearance: none;
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 30px;
+                border: 2px solid #efa964;
+                cursor: pointer;
+
+            }
+            #btn {
+                text-align: center;
+                display: inline-block;
+                font-family: "Century Gothic", sans-serif;
+                font-size: 40px;
+                border: 2px solid Black;
+                background-color: transparent;
+                border-radius: 30px;
+                margin-bottom: 100px;
+                width: 330px;
+                height: 92px;
+
+            }
+            #btn:hover {
+                cursor: pointer;
+                border: 2px solid #efa964;
+                color: #efa964;
+            }
+            /*Når browser blir mindre enn 750px i bredde endrer css til det som er skrevet under*/
+            @media only screen and (max-width: 750px) {
+                .nav-links ul{
+                    width: calc(100% - 250px); /*når linkene på høyre side kommer 250px ifra venstre siden ligger den første linken seg ned under de andre*/
+                    display: inline-block;
+                    top: 75px;
+                    right: 0;
+                }
+                nav ul li{
+                    display: block;
+                }
+                form {
+                    font-size: 12px;
+                    }
+                .slider {
+                    -webkit-appearance: none;
+                    cursor: pointer;
+                    height: 0;
+                    width: 50%;
+                    border-bottom: 2px solid black;
+                    background-color: transparent;
+                    margin-bottom: 50px;
+                    margin-top: 50px;
+                }
+                .slider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    border-radius: 20px;
+                    border: 2px solid black;
+                    cursor: pointer;
+                }
+                .slider::-webkit-slider-thumb:hover {
+                    -webkit-appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    border-radius: 20px;
+                    border: 2px solid #efa964;
+                    cursor: pointer;
+
+                }
+                #btn {
+                    text-align: center;
+                    display: inline-block;
+                    font-family: "Century Gothic", sans-serif;
+                    font-size: 20px;
+                    border: 2px solid Black;
+                    background-color: transparent;
+                    border-radius: 30px;
+                    margin-bottom: 100px;
+                    width: 200px;
+                    height: 50px;
+
+                }
+                #btn:hover {
+                    cursor: pointer;
+                    border: 2px solid #efa964;
+                    color: #efa964;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="hovedside">
+                    <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
+                        <li><a href="/index.html">Visittkort</a></li>
+                        <li><a href="how-we-roll.html">Registrer</a></li>
+                        <li><a href="hwr-report.html">Preferanser</a></li>
+                    </ul>
+                </div>
+
+            </nav>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
-                <li><a href="/index.html">Visittkort</a></li>
-                <li><a href="how-we-roll.html">Registrer</a></li>
-                <li><a href="hwr-report.html">Preferanser</a></li>
-            </ul>
+        <div id="regpref">
+            <form>
+
+                <!-- dorn - day or night -->
+                <label for="dorn">Morgenfugl</label>
+                <input class="slider" type="range" min="100" max="500" id="dorn" name="dorn" value="0">
+                <label for="dorn">Nattugle</label><br>
+
+                <!-- tora - teamwork or alone -->
+                <label for="tora">Samarbeid</label>
+                <input class="slider" type="range" min="100" max="500" id="tora" name="tora" value="0">
+                <label for="tora">Jobbe alene</label><br>
+
+                <!-- sons - schedule or no schedule -->
+                <label for="sons">Fast arbeidstid</label>
+                <input class="slider" type="range" min="100" max="500" id="sons" name="sons" value="0">
+                <label for="sons">Flexitid</label><br>
+
+                <button id="btn" type="submit">Send inn</button>
+            </form>
+
+
         </div>
 
-    </nav>
-</div>
-<div id="regpref">
-    <form>
+        <script>
+            // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
+            // Example POST method implementation using fetch:
+            async function postData(url = '', data = {}) {
+                // Default options are marked with *
+                const response = await fetch(url, {
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache,only-if-cached
+                    credentials: 'same-origin', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    redirect: 'follow', // manual, *follow, error
+                    referrerPolicy: 'no-referrer', // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                    body: JSON.stringify(data) // body data type must match"Content-Type"header
+                });
+                return response.json(); // parses JSON response into native JavaScriptobjects
+            }
 
-        <!-- dorn - day or night -->
-        <label for="dorn">Morgenfugl</label>
-        <input class="slider" type="range" min="100" max="500" id="dorn" name="dorn" value="0">
-        <label for="dorn">Nattugle</label><br>
+            function handleSubmit(event) {
+                event.preventDefault();
+                const data = new FormData(event.target);
+                const formJSON = Object.fromEntries(data.entries());
+                const results = document.querySelector('.results pre');
+                postData('https://bacit.info/', formJSON)
+                    .then(data => {
+                        //results.innerText = JSON.stringify(data, null, 2);
+                        console.log(data);
 
-        <!-- tora - teamwork or alone -->
-        <label for="tora">Samarbeid</label>
-        <input class="slider" type="range" min="100" max="500" id="tora" name="tora" value="0">
-        <label for="tora">Jobbe alene</label><br>
+                    });
+            }
+            const form = document.querySelector('form');
+            form.addEventListener('submit', handleSubmit);
 
-        <!-- sons - schedule or no schedule -->
-        <label for="sons">Fast arbeidstid</label>
-        <input class="slider" type="range" min="100" max="500" id="sons" name="sons" value="0">
-        <label for="sons">Flexitid</label><br>
-
-        <button id="btn" type="submit">Send inn</button>
-    </form>
-
-
-</div>
-
-<script>
-    // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
-    // Example POST method implementation using fetch:
-    async function postData(url = '', data = {}) {
-        // Default options are marked with *
-        const response = await fetch(url, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache,only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json',
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow', // manual, *follow, error
-            referrerPolicy: 'no-referrer', // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: JSON.stringify(data) // body data type must match"Content-Type"header
-        });
-        return response.json(); // parses JSON response into native JavaScriptobjects
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        const data = new FormData(event.target);
-        const formJSON = Object.fromEntries(data.entries());
-        const results = document.querySelector('.results pre');
-        postData('https://bacit.info/', formJSON)
-            .then(data => {
-                results.innerText = JSON.stringify(data, null, 2);
-
-            });
-    }
-    const form = document.querySelector('form');
-    form.addEventListener('submit', handleSubmit);
-
-</script>
-</body>
+        </script>
+    </body>
 </html>
