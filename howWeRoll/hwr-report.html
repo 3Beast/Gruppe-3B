@@ -11,6 +11,7 @@
             padding: 0;
             font-family: "Century Gothic", sans-serif;
         }
+
         .main{
             width: 100%;
             position: relative;
@@ -19,26 +20,30 @@
             text-align: center;
         }
 
-
         nav {
             flex: 1;
             text-align: right;
         }
-            nav ul li{
-                list-style: none;
+
+        nav ul li{
+            list-style: none;
             display: inline-block;
-                margin-right: 30px;
-            }
-            nav ul li a{
-                color: black;
-                font-size: 20px;
-            }
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
+            margin-right: 30px;
+        }
+
+        nav ul li a{
+            color: black;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         a:active {
             border: solid black 2px;
             text-decoration: none;
@@ -52,7 +57,7 @@
         }
 
         .hovedside a {
-            color: black;
+            color: black;   /* måtte ha .hovedisde a til å endre text farge fordi .hovedside endret ikke tekst farge */
         }
 
         .nav-links{
@@ -79,7 +84,6 @@
             display: inline-block;
         }
 
-
         .circel {
             width: 20px;
             height: 20px;
@@ -89,22 +93,18 @@
             margin-left: 5px;
         }
 
-
         @media only screen and (max-width: 750px) {
             #who ul {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                text-align: left;
                 width: 50%;
             }
-
 
             .nav-links ul{
                 width: calc(100% - 250px);
                 display: inline-block;
                 top: 75px;
                 right: 0;
-                z-index: 2;
             }
         }
     </style>
@@ -123,9 +123,7 @@
                 <li><a href="hwr-report.html">Preferanser</a></li>
             </ul>
         </div>
-
     </nav>
-
 </div>
 <div id="who">
     <ul>
@@ -150,27 +148,27 @@
         ctx.font = "1em Arial"; //font og tekststørrelse
         ctx.moveTo(100,250); //linje start
         ctx.lineTo(500,250);//linje slutt
-        ctx.fillText("placeholder",0,250); //x=0 y=250 plassering tekst
-        ctx.fillText("placeholder2",500,250);
+        ctx.fillText("Morgenfugl",0,250); //x=0 y=250 plassering tekst
+        ctx.fillText("Nattugle",500,250);//x=500 y=250 plassering tekst
 
         ctx.moveTo(100,300);
         ctx.lineTo(500,300);
-        ctx.fillText("placeholder3",0,300);
-        ctx.fillText("placeholder4",500,300);
+        ctx.fillText("Flexitid",0,300);
+        ctx.fillText("Fast arbeidstid",500,300);
 
         ctx.moveTo(100,350);
         ctx.lineTo(500,350);
-        ctx.fillText("placeholder5",0,350);
-        ctx.fillText("placeholder6",500,350);
-        ctx.stroke(); //ferdig tegne
+        ctx.fillText("Samarbeid",0,350);
+        ctx.fillText("Gruppe",500,350);
+        ctx.stroke(); //ferdig å tegne, fyller inn i canvas
 
         fetch("https://bacit.info/hwr/20210930122803-acab32e2bc7b6330f92b78c8dbf91b68.json")
             .then(response => response.json()) //responsen er data i Json fromat
-            .then(data => { console.log(data) //for å sjekke at jeg har hentet dataen i consolen
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
                 ctx.beginPath(); //starter tegning
                 ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
                 ctx.fillStyle = "red"; //valg av farge på sirkel
-                ctx.fill();//fyll in farge i sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
                 ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
 
                 ctx.beginPath(); //starter tegning
@@ -186,6 +184,5 @@
                 ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
             });
     </script>
-
 </body>
 </html>
