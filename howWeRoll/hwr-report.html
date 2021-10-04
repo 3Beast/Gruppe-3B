@@ -154,17 +154,16 @@
         ctx.fillText("Morgenfugl",0,250); //x=0 y=250 plassering tekst
         ctx.fillText("Nattugle",500,250);//x=500 y=250 plassering tekst
 
-
         ctx.moveTo(100,350);
         ctx.lineTo(500,350);
         ctx.fillText("Samarbeid",0,350);
         ctx.fillText("Jobbe alene",500,350);
-        ctx.stroke(); //ferdig å tegne, fyller inn i canvas
 
         ctx.moveTo(100,300);
         ctx.lineTo(500,300);
         ctx.fillText("Fast arbeidstid",0,300);
         ctx.fillText("Flexitid",500,300);
+        ctx.stroke(); //ferdig å tegne, fyller inn i canvas
 
         //eirik prefs
         fetch("https://bacit.info/hwr/20211004112949-7024538a7cdca31e426acfd8400a3965.json")
