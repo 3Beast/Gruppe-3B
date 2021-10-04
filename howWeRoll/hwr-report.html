@@ -64,12 +64,19 @@
         }
 
         #who {
-            display: inline-flex;
             font-size: 1.2em;
             width: 100%;
+            text-align: center;
             position: absolute;
             height: 1.5em;
+            margin-left: 10px;
         }
+
+        #who li {
+            list-style: none;
+            display: inline-block;
+        }
+
 
         .circel {
             width: 20px;
@@ -80,6 +87,7 @@
             margin-left: 5px;
         }
 
+
         @media only screen and (max-width: 700px) {
 
             .nav-links ul{
@@ -89,12 +97,7 @@
                 right: 0;
                 z-index: 2;
             }
-
-
         }
-
-
-
     </style>
 </head>
 <body>
@@ -116,14 +119,16 @@
 
 </div>
 <div id="who">
-    Asbjørn<div style="background: red;" class="circel"></div>
-    Eirik<div style="background: darkcyan;" class="circel"></div>
-    Eziz<div style="background: green;" class="circel"></div>
-    Frida<div style="background: yellow;" class="circel"></div>
-    Helene<div style="background: orange;" class="circel"></div>
-    Silje<div style="background: purple;" class="circel"></div>
-    Stian<div style="background: darkblue;" class="circel"></div>
-    Tonje<div style="background: pink;" class="circel"></div>
+    <ul>
+        <li>Asbjørn<div style="background: red;" class="circel"></div></li>
+        <li> Eirik<div style="background: darkcyan;" class="circel"></div></li>
+        <li> Eziz<div style="background: green;" class="circel"></div></li>
+        <li> Frida<div style="background: yellow;" class="circel"></div></li>
+        <li> Helene<div style="background: orange;" class="circel"></div></li>
+        <li>Silje<div style="background: purple;" class="circel"></div></li>
+        <li> Stian<div style="background: darkblue;" class="circel"></div></li>
+        <li> Tonje<div style="background: pink;" class="circel"></div></li>
+    </ul>
 </div>
 <div id="pref">
     <canvas id="cnv" width="1000px" height="500px"></canvas>
