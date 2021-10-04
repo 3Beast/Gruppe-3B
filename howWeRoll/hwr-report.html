@@ -106,6 +106,9 @@
                 top: 75px;
                 right: 0;
             }
+            nav ul li{
+                display: block;
+            }
         }
     </style>
 </head>
@@ -113,7 +116,7 @@
 <div class="main">
     <nav>
         <div class="hovedside">
-            <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
+            <tittel><a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a></tittel>
         </div>
         <div class="nav-links">
             <ul>
@@ -180,6 +183,29 @@
                 ctx.beginPath(); //starter tegning
                 ctx.arc(data.dorn,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
                 ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+
+        //* Tonje pref *//
+        fetch("https://bacit.info/hwr/20211004105052-f5f1d41e68c1fd4aef4f1e6a468eb64c8.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "pink"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "pink"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "pink"; //valg av farge på sirkel
                 ctx.fill();//fyll in farge
                 ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
             });
