@@ -59,7 +59,7 @@
             #regpref{
                 width: 100%;
                 height: max-content;
-                padding-top: 50px;
+                padding-top: 200px;
                 text-align: center;
 
             }
@@ -115,7 +115,16 @@
                 border: 2px solid #efa964;
                 color: #efa964;
             }
-            /*Når browser blir mindre enn 750px i bredde endrer css til det som er skrevet under*/
+            #footer {
+                text-align: center;
+                background-color: whitesmoke;
+                color: black;
+                padding: 20px;
+                bottom: 0;
+                position: absolute;
+                width: 100%;
+            }
+            /*Når nettleseren blir mindre enn 750px i bredde endrer css til det som er skrevet under*/
             @media only screen and (max-width: 750px) {
                 .nav-links ul{
                     width: calc(100% - 250px); /*når linkene på høyre side kommer 250px ifra venstre siden ligger den første linken seg ned under de andre*/
@@ -216,8 +225,9 @@
 
                 <button id="btn" type="submit">Send inn</button>
             </form>
-
-
+        </div>
+        <div id="footer">
+            <p>Gruppe 3B</p>
         </div>
 
         <script>
