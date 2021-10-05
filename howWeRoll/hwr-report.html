@@ -93,6 +93,16 @@
             margin-left: 5px;
         }
 
+        .footer {
+            text-align: center;
+            background-color: whitesmoke;
+            color: black;
+            padding: 20px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+
         @media only screen and (max-width: 750px) { /*Viss nettleseren har width < 750 skal denne css brukes*/
             #who ul {               /* PLasserer navn og sirkelene med farge i en 3x3 tabell*/
                 display: grid;
@@ -143,6 +153,9 @@
 <div id="pref">
     <canvas id="cnv" width="1000px" height="500px"></canvas>
 </div>
+<footer class="footer">
+    <p>Gruppe 3B</p>
+</footer>
     <script>
         let cnv = document.getElementById("cnv"); //henter canvas ifra html
         let ctx = cnv.getContext("2d"); // sier at jeg skal tegne i 2d
