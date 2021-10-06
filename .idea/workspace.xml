@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efa365dd-c59a-4098-8afa-915d5741acf4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/howWeRoll/how-we-roll.html" beforeDir="false" afterPath="$PROJECT_DIR$/howWeRoll/how-we-roll.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HowWeRoll" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,7 +46,9 @@
       <workItem from="1632849342742" duration="24000" />
       <workItem from="1633080752793" duration="1267000" />
       <workItem from="1633082108791" duration="358000" />
-      <workItem from="1633422211939" duration="4421000" />
+      <workItem from="1633422211939" duration="4875000" />
+      <workItem from="1633526818892" duration="23000" />
+      <workItem from="1633528455457" duration="539000" />
     </task>
     <servers />
   </component>

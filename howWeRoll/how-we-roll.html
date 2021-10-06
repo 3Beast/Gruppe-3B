@@ -7,11 +7,13 @@
         <title>How We Roll</title>
 
         <style>
+            /*  Styler body */
             body {
                 margin: 0 auto;
                 padding: 0;
                 font-family: "Century Gothic", sans-serif;
             }
+            /*  Styler Navigasjonsbaren */
             .main{
                 width: 100%;
                 position: relative;
@@ -19,8 +21,13 @@
                 background: whitesmoke;
                 text-align: center;
             }
+            /*  Styler nav-linker */
             nav {
                 flex: 1;
+                text-align: right;
+            }
+            .nav-links{
+                flex:1;
                 text-align: right;
             }
             nav ul li{
@@ -42,6 +49,7 @@
                 border: solid black 2px;
                 text-decoration: none;
             }
+            /*  Styler "logo" */
             .hovedside {
                 margin-left: 30px;
                 position: absolute;
@@ -51,11 +59,7 @@
             .hovedside a {
                 color: black;
             }
-
-            .nav-links{
-                flex:1;
-                text-align: right;
-            }
+            /*  Styler preferanse div'en */
             #regpref{
                 width: 100%;
                 height: max-content;
@@ -63,11 +67,13 @@
                 text-align: center;
 
             }
+            /*  Styler form elementet */
             form {
                 text-align: center;
 
             }
-            /*Kode hentet 29.09.2021 fra:https://codepen.io/renaudtertrais/pen/waLXVx */
+            /* Styler slideren i form
+            Kode hentet 29.09.2021 fra:https://codepen.io/renaudtertrais/pen/waLXVx */
             .slider {
                 -webkit-appearance: none;
                 cursor: pointer;
@@ -97,6 +103,7 @@
                 cursor: pointer;
 
             }
+            /*  Styler knappen i form */
             #btn {
                 text-align: center;
                 display: inline-block;
@@ -111,11 +118,13 @@
                 height: 92px;
 
             }
+            /*  Styler knappen når musa er over */
             #btn:hover {
                 cursor: pointer;
                 border: 2px solid #efa964;
                 color: #efa964;
             }
+            /*  Styler footer */
             #footer {
                 text-align: center;
                 background-color: whitesmoke;
@@ -124,8 +133,9 @@
                 height: 150px;
                 padding-top: 75px;
             }
-            /*Når nettleseren blir mindre enn 750px i bredde endrer css til det som er skrevet under*/
-            @media only screen and (max-width: 750px) {
+            /*Når nettleseren blir mindre enn 960px i bredde endrer css til det som er skrevet under*/
+            @media screen and (max-width: 960px) {
+                /*  Styler nav-linker */
                 .nav-links ul{
                     width: calc(100% - 250px); /*når linkene på høyre side kommer 250px ifra venstre siden ligger den første linken seg ned under de andre*/
                     display: inline-block;
@@ -135,9 +145,11 @@
                 nav ul li{
                     display: block;
                 }
+                /*  Styler fonten i form */
                 form {
                     font-size: 12px;
-                    }
+                }
+                /*  Styler slider i form */
                 .slider {
                     -webkit-appearance: none;
                     cursor: pointer;
@@ -167,6 +179,7 @@
                     cursor: pointer;
 
                 }
+                /*  Styler knappen i form */
                 #btn {
                     text-align: center;
                     display: inline-block;
@@ -179,6 +192,7 @@
                     width: 200px;
                     height: 50px;
                 }
+                /*  Styler knappen når musa er over */
                 #btn:hover {
                     cursor: pointer;
                     border: 2px solid #efa964;
@@ -188,6 +202,7 @@
         </style>
     </head>
     <body>
+    <!-- Navigasjonsbaren --!>
         <div class="main">
             <nav>
                 <div class="hovedside">
@@ -204,6 +219,7 @@
 
             </nav>
         </div>
+        <!-- Preferanse form --!>
         <div id="regpref">
             <form>
 
@@ -225,11 +241,13 @@
                 <button id="btn" type="submit">Send inn</button>
             </form>
         </div>
+        <!-- Footer --!>
         <div id="footer">
             <p>Gruppe 3B</p>
         </div>
 
         <script>
+            // Kode hentet 04.10.21 fra https://github.com/digitnow/how-we-roll/blob/main/how-we-roll.html
             // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
             // Example POST method implementation using fetch:
             async function postData(url = '', data = {}) {
@@ -258,7 +276,7 @@
                 postData('https://bacit.info/', formJSON)
                     .then(data => {
                         //results.innerText = JSON.stringify(data, null, 2);
-                        console.log(data);
+                        console.log(data); //Skriver ut det som bli lagre i console
 
                     });
             }
