@@ -7,89 +7,214 @@
     <title>How We Roll</title>
 
     <style>
-        .Sidetittel {
-            font-family: "Times New Roman";
+        body {
+            margin: 0 auto;
+            padding: 0;
+            font-family: "Century Gothic", sans-serif;
+        }
+        .main{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: whitesmoke;
+            text-align: center;
         }
 
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+        nav ul li a{
+            color: black;
+            font-size: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:active {
+            border: solid black 2px;
+            text-decoration: none;
+        }
+
+        .hovedside {
+            margin-left: 30px;
+            position: absolute;
+            background: none;
+            font-size: 30px;
+        }
+
+        .hovedside a {
+            color: black;
+        }
+
+        .nav-links{
+            flex:1;
+            text-align: right;
+        }
+        #regpref{
+            width: 100%;
+            height: max-content;
+            padding-top: 50px;
+
+        }
+        form {
+            text-align: center;
+
+        }
+        /*Kode hentet 29.09.2021 fra:https://codepen.io/renaudtertrais/pen/waLXVx */
         .slider {
             -webkit-appearance: none;
-            width:400px;
-            height:15px;
-            background:#6f82a1;
+            cursor: pointer;
+            height: 0;
+            width: 50%;
+            border-bottom: 2px solid black;
+            background-color: transparent;
+            margin-bottom: 50px;
+            margin-top: 50px;
         }
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width:20px;
-            height:20px;
-            background:#dee3d5;
-            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 30px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        .slider::-webkit-slider-thumb:hover {
+            -webkit-appearance: none;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 30px;
+            border: 2px solid #efa964;
+            cursor: pointer;
+
+        }
+
+        #btn {
+            text-align: center;
+            display: inline-block;
+            font-family: "Century Gothic", sans-serif;
+            font-size: 40px;
+            border: 2px solid Black;
+            background-color: transparent;
+            border-radius: 30px;
+            margin-bottom: 100px;
+            width: 330px;
+            height: 92px;
+
+        }
+        #btn:hover {
+            cursor: pointer;
+            border: 2px solid #efa964;
+            color: #efa964;
+        }
+        @media only screen and (max-width: 750px) {
+            #regpref {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: center;
+                width: 50%;
+            }
+
+
+            .nav-links ul{
+                width: calc(100% - 250px);
+                display: inline-block;
+                top: 75px;
+                right: 0;
+                z-index: 2;
+            }
         }
     </style>
 </head>
 <body>
+<div class="main">
+    <nav>
+        <div class="hovedside">
+            <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
+                <li><a href="/index.html">Visittkort</a></li>
+                <li><a href="how-we-roll.html">Registrer</a></li>
+                <li><a href="hwr-report.html">Preferanser</a></li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<div id="regpref">
     <form>
-        <p class="Sidetittel"><b>Gruppe 3B parametere</b></p>
-        <p><label for="navnFor">Fornavn:</label>
-            <input type="text" id="navnFor" /></p>
 
-        <p><label for="navnEtter">Etternavn:</label>
-            <input type="text" id="navnEtter" /></p>
+        <!-- dorn - day or night -->
+        <label for="dorn">Morgenfugl</label>
+        <input class="slider" type="range" min="100" max="500" id="dorn" name="dorn" value="0">
+        <label for="dorn">Nattugle</label><br>
 
-        <p><label for="epost">E-Post:</label>
-            <input type="text" id="epost" /></p>
+        <!-- tora - teamwork or alone -->
+        <label for="tora">Samarbeid</label>
+        <input class="slider" type="range" min="100" max="500" id="tora" name="tora" value="0">
+        <label for="tora">Jobbe alene</label><br>
 
-        <p><label for="studie">Studieretning:</label>
-            <input type="text" id="studie" /></p>
-<p>
-    <!-- dorn - day or night -->
-    <label for="dorn">Morgenfugl</label>
-    <input class="slider" type="range" min="0" max="10" id="dorn" name="dorn" value="0">
-    <label for="dorn">Nattugle</label>
-</p>
+        <!-- sons - schedule or no schedule -->
+        <label for="sons">Fast arbeidstid</label>
+        <input class="slider" type="range" min="100" max="500" id="sons" name="sons" value="0">
+        <label for="sons">Flexitid</label><br>
 
-<p>
-    <!-- tora - teamwork or alone -->
-    <label for="tora">Teamwork</label>
-    <input class="slider" type="range" min="0" max="10" id="tora" name="tora" value="0">
-    <label for="tora">Jobbe alene</label>
-</p>
-
-        <p>
-            <!-- sons - schedule or no schedule -->
-            <label for="sons">08-16</label>
-            <input class="slider" type="range" min="0" max="10" id="sons" name="sons" value="0">
-            <label for="sons">Jeg har ikke timeplan</label>
-        </p>
-
-        <p>
-            <!-- tontf - timeframe or no timeframe -->
-            <label for="tontf">Jobbe innenfor tidsplan</label>
-            <input class="slider" type="range" min="0" max="10" id="tontf" name="tontf" value="0">
-            <label for="tontf">Jeg kan jobbe når som helst</label>
-        </p>
-        <button id="lagre" type="button">Send inn</button>
+        <button id="btn" type="submit">Send inn</button>
     </form>
-    <div class="results">
-        <h4>Datainnsamling</h4>
-        <pre></pre>
-    </div>
+
+
+</div>
 
 <script>
-
-    let btn = document.getElementById("lagre");
-    btn.addEventListener("click",lagre);
-    function lagre() {
-
-        let dorn = document.getElementById("dorn").value;
-        console.log("dorn" + dorn);
-        let tora = document.getElementById("tora").value;
-        console.log("tora" + tora);
-        let sons = document.getElementById("sons").value;
-        console.log("sons" + sons);
-        let tontf = document.getElementById("tontf").value;
-        console.log("tontf" + tontf);
-
+    // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
+    // Example POST method implementation using fetch:
+    async function postData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache,only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(data) // body data type must match"Content-Type"header
+        });
+        return response.json(); // parses JSON response into native JavaScriptobjects
     }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector('.results pre');
+        postData('https://bacit.info/', formJSON)
+            .then(data => {
+              //*  results.innerText = JSON.stringify(data, null, 2); *//
+                console.log(data);
+
+            });
+    }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleSubmit);
+
 </script>
 </body>
 </html>

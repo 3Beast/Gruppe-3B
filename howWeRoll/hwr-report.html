@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gruppe 3B - Preferanser</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+            font-family: "Century Gothic", sans-serif;
+        }
+
+        .main{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: whitesmoke;
+            text-align: center;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a{
+            color: black;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            border: solid black 2px;
+            text-decoration: none;
+        }
+
+        .hovedside {
+            margin-left: 30px;
+            position: absolute;
+            background: none;
+            font-size: 30px;
+        }
+
+        .hovedside a {
+            color: black;   /* måtte ha .hovedisde a til å endre text farge fordi .hovedside endret ikke tekst farge */
+        }
+
+        .nav-links{
+            flex:1;
+            text-align: right;
+        }
+        #pref{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-top: 50px;
+            position: absolute;
+        }
+
+        #who {
+            font-size: 1.2em;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            height: 1.5em;
+            margin-left: 10px;
+        }
+
+        #who li {
+            display: inline-block;
+        }
+
+        .circel {
+            width: 20px;
+            height: 20px;
+            border: solid black 2px;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-left: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: whitesmoke;
+            color: black;
+            padding: 20px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 750px) { /*Viss nettleseren har width < 750 skal denne css brukes*/
+            #who ul {               /* PLasserer navn og sirkelene med farge i en 4x2 tabell*/
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                width: 50%;
+            }
+
+            .footer {
+                bottom: 0;
+                position: absolute;
+            }
+            .nav-links ul{
+                width: calc(100% - 250px); /*når linkene på høyre side kommer 250px ifra venstre siden ligger den første linken seg ned under de andre*/
+                display: inline-block;
+                top: 75px;
+                right: 0;
+            }
+            nav ul li{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <nav>
+        <div class="hovedside">
+            <tittel><a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a></tittel>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
+                <li><a href="/index.html">Visittkort</a></li>
+                <li><a href="how-we-roll.html">Registrer</a></li>
+                <li><a href="hwr-report.html">Preferanser</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="who">
+    <ul>
+        <li>Asbjørn<div style="background: red;" class="circel"></div></li>
+        <li> Eirik<div style="background: darkcyan;" class="circel"></div></li>
+        <li> Eziz<div style="background: green;" class="circel"></div></li>
+        <li> Frida<div style="background: yellow;" class="circel"></div></li>
+        <li> Helene<div style="background: orange;" class="circel"></div></li>
+        <li>Silje<div style="background: purple;" class="circel"></div></li>
+        <li> Stian<div style="background: darkblue;" class="circel"></div></li>
+        <li> Tonje<div style="background: pink;" class="circel"></div></li>
+    </ul>
+</div>
+<div id="pref">
+    <canvas id="cnv" width="600px" height="500px"></canvas>
+        <footer class="footer">
+            <p>Gruppe 3B</p>
+        </footer>
+</div>
+
+
+    <script>
+        let cnv = document.getElementById("cnv"); //henter canvas ifra html
+        let ctx = cnv.getContext("2d"); // sier at jeg skal tegne i 2d
+
+        ctx.beginPath(); //start tegner linjer og tekst
+        ctx.font = "1em Arial"; //font og tekststørrelse
+        ctx.moveTo(100,250); //linje start
+        ctx.lineTo(500,250);//linje slutt
+        ctx.fillText("Morgenfugl",0,250); //x=0 y=250 plassering tekst
+        ctx.fillText("Nattugle",510,250);//x=500 y=250 plassering tekst
+
+        ctx.moveTo(100,350);
+        ctx.lineTo(500,350);
+        ctx.fillText("Samarbeid",0,300);
+        ctx.fillText("Jobbe alene",510,300);
+
+        ctx.moveTo(100,300);
+        ctx.lineTo(500,300);
+        ctx.fillText("Fast arbeidstid",0,350);
+        ctx.fillText("Flexitid",510,350);
+        ctx.stroke(); //ferdig å tegne, fyller inn i canvas
+
+        //eirik prefs
+        fetch("https://bacit.info/hwr/20211004112949-7024538a7cdca31e426acfd8400a3965.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkcyan"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkcyan"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkcyan"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+
+        //* Tonje pref *//
+        fetch("https://bacit.info/hwr/20211004113134-00bffb993ce8cecce42e0d41421013fb.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "pink"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "pink"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "pink"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+
+        //* Eziz pref *//
+        fetch("https://bacit.info/hwr/20211004113232-876321900673e6ec9f7ef75fdc39a1ce.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "green"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "green"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "green"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+
+
+        //* Silje pref *//
+        fetch("https://bacit.info/hwr/20211007122046-15f4d73c30d29ec6a60300d0b13702f3.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "purple"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "purple"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "purple"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+        //* Asbjørns pref *//
+        fetch("https://bacit.info/hwr/20211007133002-c42275869a9748bcd97982e00e73c3ef.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+        //* Stian pref *//
+        fetch("https://bacit.info/hwr/20211007133149-2faae0a15e0a7eb86aa8b62348ddb308.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkblue"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkblue"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkblue"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+    </script>
+</body>
+</html>
