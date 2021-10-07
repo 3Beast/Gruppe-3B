@@ -96,7 +96,17 @@
       width: 100px;
       height: 50px;
     }
-    @media screen and (max-width:960px){
+    /* Styler footer*/
+    .footer {
+      text-align: center;
+      background-color: whitesmoke;
+      color: black;
+      padding: 20px;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+    @media screen and (max-width:960px){  /* Når skjermen blir mindre enn 960px i bredden, så skjer det som står innenfor krøllparentesene*/
       #middel {
         display:grid;
         grid-template-columns:auto;
@@ -113,14 +123,14 @@
         display: block;
       }
     }
-    @media screen and (min-width:960px){
+    @media screen and (min-width:960px){ /* Når skjermen blir mellom 960px og 1680px så skjer det som står innenfor krøllparentesene*/
       #middel {
         display:grid;
         grid-template-columns:auto auto;
         grid-gap:50px 50px;
       }
     }
-    @media screen and (min-width:1680px){
+    @media screen and (min-width:1680px){  /* Når skjermen blir større enn 1680px i bredden, så skjer det som står innenfor krøllparentesene*/
       #middel {
         display:grid;
         grid-template-columns:auto auto auto;
@@ -221,6 +231,9 @@
       <img src="img/uia.png" class="logo">
     </div>
   </div>
+  <footer class="footer">
+    <p>Gruppe 3B</p>
+  </footer>
 </div>
 </body>
 </html>
