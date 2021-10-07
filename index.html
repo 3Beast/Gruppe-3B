@@ -8,8 +8,10 @@
   <style>
     #middel {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns:repeat(auto-fit, minmax(27rem, 1fr));
+      grid-gap: 1em;
+      align-items:center;
+      justify-items:center;
     }
     .card{
       position: relative;
@@ -19,7 +21,6 @@
       border: 2px solid #E8E8E8;
       background-color: white;
     }
-
     .input1{
       padding-top: 30px;
       padding-left: 10px;
@@ -32,21 +33,18 @@
       padding-left: 10px;
       font-family: century gothic, sans-serif;
     }
-
     .input3 {
       margin-top: 5px;
       margin-left: 120px;
       padding-left: 10px;
       font-family: century gothic, sans-serif;
     }
-
     .logo {
       position: absolute;
       left: 15px;
       top: 25px;
       width: 100px;
       height: 50px;
-
     }
     .main{
       width: 100%;
