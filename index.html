@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gruppe 3BEAST</title>
   <style>
+    body {
+      margin:0 auto;
+      padding:0;
+      font-family:"Century Gothic", sans-serif;
+    }
     #middel {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      align-items:center;
+      justify-items:center;
+      background-color: white;
     }
     .card{
       position: relative;
@@ -19,7 +24,6 @@
       border: 2px solid #E8E8E8;
       background-color: white;
     }
-
     .input1{
       padding-top: 30px;
       padding-left: 10px;
@@ -32,57 +36,89 @@
       padding-left: 10px;
       font-family: century gothic, sans-serif;
     }
-
     .input3 {
       margin-top: 5px;
       margin-left: 120px;
       padding-left: 10px;
       font-family: century gothic, sans-serif;
     }
-
     .logo {
       position: absolute;
       left: 15px;
       top: 25px;
       width: 100px;
       height: 50px;
-
     }
     .main{
       width: 100%;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(to left, #efa964, navajowhite);
+      background: whitesmoke;
+      text-align:center;
     }
     nav{
-      width: 80%;
-      position: sticky;
-      margin:20px auto;
-      z-index: 1;
-      display: flex;
-      align-items: center;
+     flex:1;
+      text-align:right;
     }
     .maintitle{
-      flex-basis: 20%;
-      color: black;
+      margin-left: 30px;
+      position: absolute;
+      background: none;
+      font-size: 30px;
+    }
+    .maintitle a{
+      color:black;
       text-decoration: none;
-      font-family: century gothic, sans-serif;
-      font-size: 20px;
     }
     .nav-links{
       flex:1;
       text-align: right;
-      font-family: century gothic, sans-serif;
     }
-    .nav-links ul li{
+    nav ul li{
       list-style: none;
-      display: inline-flex;
-      margin: 0 30px;
+      display: inline-block;
+      margin: 30px;
     }
-    .nav-links ul li a{
-      color: aliceblue;
+    nav ul li a{
+      color: black;
       text-decoration: none;
-      font-family: "Century Gothic"
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    a:active{
+      border:solid black 2px;
+      text-decoration: none;
+    }
+    @media screen and (max-width:960px){
+      #middel {
+        display:grid;
+        grid-template-columns:auto;
+        grid-gap:50px 50px;
+      }
+      .nav-links ul{
+        width:calc(100% - 250px);
+        display:inline-block;
+        top:75px;
+        right:0;
+      }
+      nav ul li {
+        display:block;
+      }
+    }
+    @media screen and (min-width:960px){
+      #middel {
+        display:grid;
+        grid-template-columns:auto auto;
+        grid-gap:50px 50px;
+      }
+    }
+    @media screen and (min-width:1680px){
+      #middel {
+        display:grid;
+        grid-template-columns:auto auto auto;
+        grid-gap:50px 50px;
+      }
     }
   </style>
   <title>Title</title>
@@ -91,14 +127,14 @@
 <div class="main">
   <nav>
     <div class="maintitle">
-      <h1><a style="color:white"href="https://3beast.github.io/Gruppe-3B/">GRUPPE 3B</a></h1>
+      <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
     </div>
     <div class="nav-links">
       <ul>
         <li><a href="https://github.com/3Beast/Gruppe-3B">Repository</a></li>
         <li><a href="#">Visittkort</a></li>
-        <li><a href="howWeRoll/how-we-roll.html">How We Roll</a></li>
-        <li><a href="howWeRoll/hwr-report.html">HWR Report</a></li>
+        <li><a href="howWeRoll/how-we-roll.html">Registrer</a></li>
+        <li><a href="howWeRoll/hwr-report.html">Preferanser</a></li>
       </ul>
     </div>
   </nav>
