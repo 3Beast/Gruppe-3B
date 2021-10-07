@@ -339,6 +339,28 @@
                 ctx.fill();//fyll in farge
                 ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
             });
+        //* Frida pref *//
+        fetch("https://bacit.info/hwr/20211007144850-caf94b4d6c66a6eb03d0f4ec701778d8.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "yellow"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "yellow"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "yellow"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
     </script>
 </body>
 </html>
