@@ -3,8 +3,13 @@
 Vi startet oppgaven med å lese oppgaven/casen nøye for å forstå hva "oppdragsgiver" ønsker ut fra nettsiden. 
 Etter dette lagde vi brukerhistorier for å få en bedre forståelse for hva de ansatte og sjefene trengte fra nettsiden.
 Da brukerhistoriene var skrevet bestemte vi oss for at alle skulle lage en mockup av hvordan nettsdien skulle se ut,
-og til slutt velge ut en vi ville basere designet vårt på. Etter dette valgte vi å starte å kode. Vi valgte å fordele oppgavene 
-i dette prosjekter for bruke tiden vi hadde til rådighet godt. 
+og til slutt velge ut en vi ville basere designet vårt på.
+
+For å planlegge prosjektet videre brukte vi et Kanban-bord, som er delt opp i fire kolonner, "To do", "In progress", "Under review"
+og "Done". Vi lagde issues på de tingene som måtte gjøres på nettsiden. F.eks. "Lage form element" og "Legg til js i how-we-roll.html".
+
+Etter dette valgte vi å starte å kode. Vi valgte å fordele oppgavene 
+i dette prosjekter for bruke tiden vi hadde til rådighet godt.
 
 #Brukerhistorier
 - Som ansatt ønsker jeg å registrere mine preferanser slik at arbeidsgiver vet mer om meg.
