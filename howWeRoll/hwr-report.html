@@ -69,6 +69,7 @@
             height: max-content;
             text-align: center;
             padding-top: 50px;
+            position: absolute;
         }
 
         #who {
@@ -106,7 +107,7 @@
         @media only screen and (max-width: 750px) { /*Viss nettleseren har width < 750 skal denne css brukes*/
             #who ul {               /* PLasserer navn og sirkelene med farge i en 3x3 tabell*/
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
                 width: 50%;
             }
 
@@ -151,11 +152,13 @@
     </ul>
 </div>
 <div id="pref">
-    <canvas id="cnv" width="1000px" height="500px"></canvas>
+    <canvas id="cnv" width="600px" height="500px"></canvas>
+        <footer class="footer">
+            <p>Gruppe 3B</p>
+        </footer>
 </div>
-<footer class="footer">
-    <p>Gruppe 3B</p>
-</footer>
+
+
     <script>
         let cnv = document.getElementById("cnv"); //henter canvas ifra html
         let ctx = cnv.getContext("2d"); // sier at jeg skal tegne i 2d
