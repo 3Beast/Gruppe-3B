@@ -172,17 +172,17 @@
         ctx.moveTo(100,250); //linje start
         ctx.lineTo(500,250);//linje slutt
         ctx.fillText("Morgenfugl",0,250); //x=0 y=250 plassering tekst
-        ctx.fillText("Nattugle",500,250);//x=500 y=250 plassering tekst
+        ctx.fillText("Nattugle",510,250);//x=500 y=250 plassering tekst
 
         ctx.moveTo(100,350);
         ctx.lineTo(500,350);
         ctx.fillText("Samarbeid",0,300);
-        ctx.fillText("Jobbe alene",500,300);
+        ctx.fillText("Jobbe alene",510,300);
 
         ctx.moveTo(100,300);
         ctx.lineTo(500,300);
         ctx.fillText("Fast arbeidstid",0,350);
-        ctx.fillText("Flexitid",500,350);
+        ctx.fillText("Flexitid",510,350);
         ctx.stroke(); //ferdig å tegne, fyller inn i canvas
 
         //eirik prefs
@@ -255,7 +255,6 @@
             });
 
 
-
         //* Silje pref *//
         fetch("https://bacit.info/hwr/20211007122046-15f4d73c30d29ec6a60300d0b13702f3.json")
             .then(response => response.json()) //responsen er data i Json fromat
@@ -297,6 +296,28 @@
                 ctx.beginPath(); //starter tegning
                 ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
                 ctx.fillStyle = "red"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+            });
+        //* Stian pref *//
+        fetch("https://bacit.info/hwr/20211007133149-2faae0a15e0a7eb86aa8b62348ddb308.json")
+            .then(response => response.json()) //responsen er data i Json fromat
+            .then(data => { console.log(data); //for å sjekke at jeg har hentet dataen i consolen
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.dorn,250,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkblue"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge i sirkel (kan stoppe her)
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.tora,300,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkblue"; //valg av farge på sirkel
+                ctx.fill();//fyll in farge
+                ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
+
+                ctx.beginPath(); //starter tegning
+                ctx.arc(data.sons,350,5,0,2 * Math.PI); //tegner sirkel, med en bestemt data fra json som x verdi
+                ctx.fillStyle = "darkblue"; //valg av farge på sirkel
                 ctx.fill();//fyll in farge
                 ctx.stroke();// ferdig tegne (trengs for å få svart kant rundt sirkel)
             });
