@@ -66,7 +66,7 @@
         }
         #pref{
             width: 100%;
-            height: max-content;
+            height: 100%;
             text-align: center;
             padding-top: 50px;
             position: absolute;
@@ -105,12 +105,16 @@
         }
 
         @media only screen and (max-width: 750px) { /*Viss nettleseren har width < 750 skal denne css brukes*/
-            #who ul {               /* PLasserer navn og sirkelene med farge i en 3x3 tabell*/
+            #who ul {               /* PLasserer navn og sirkelene med farge i en 4x2 tabell*/
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 width: 50%;
             }
 
+            .footer {
+                bottom: 0;
+                position: absolute;
+            }
             .nav-links ul{
                 width: calc(100% - 250px); /*når linkene på høyre side kommer 250px ifra venstre siden ligger den første linken seg ned under de andre*/
                 display: inline-block;
