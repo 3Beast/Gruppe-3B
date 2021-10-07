@@ -11,7 +11,54 @@
       padding:0;
       font-family:"Century Gothic", sans-serif;
     }
+    /*  Styler Navigasjonsbaren */
+    .main{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: whitesmoke;
+      text-align: center;
+    }
+    /*  Styler nav-linker */
+    nav {
+      flex: 1;
+      text-align: right;
+    }
+    .nav-links{
+      flex:1;
+      text-align: right;
+    }
+    nav ul li{
+      list-style: none;
+      display: inline-block;
+      margin-right: 30px;
+    }
+    nav ul li a{
+      color: black;
+      font-size: 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:active {
+      border: solid black 2px;
+      text-decoration: none;
+    }
+    /*  Styler "logo" */
+    .hovedside {
+      margin-left: 30px;
+      position: absolute;
+      background: none;
+      font-size: 30px;
+    }
+    .hovedside a {
+      color: black;
+    }
     #middel {
+      padding-top:20px;
       align-items:center;
       justify-items:center;
       background-color: white;
@@ -49,61 +96,21 @@
       width: 100px;
       height: 50px;
     }
-    .main{
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      background: whitesmoke;
-      text-align:center;
-    }
-    nav{
-     flex:1;
-      text-align:right;
-    }
-    .maintitle{
-      margin-left: 30px;
-      position: absolute;
-      background: none;
-      font-size: 30px;
-    }
-    .maintitle a{
-      color:black;
-      text-decoration: none;
-    }
-    .nav-links{
-      flex:1;
-      text-align: right;
-    }
-    nav ul li{
-      list-style: none;
-      display: inline-block;
-      margin: 30px;
-    }
-    nav ul li a{
-      color: black;
-      text-decoration: none;
-    }
-    a:hover{
-      text-decoration: underline;
-    }
-    a:active{
-      border:solid black 2px;
-      text-decoration: none;
-    }
     @media screen and (max-width:960px){
       #middel {
         display:grid;
         grid-template-columns:auto;
         grid-gap:50px 50px;
       }
+      /*  Styler nav-linker */
       .nav-links ul{
-        width:calc(100% - 250px);
-        display:inline-block;
-        top:75px;
-        right:0;
+        width: calc(100% - 250px); /*når linkene på høyre side kommer 250px ifra venstre siden ligger den første linken seg ned under de andre*/
+        display: inline-block;
+        top: 75px;
+        right: 0;
       }
-      nav ul li {
-        display:block;
+      nav ul li{
+        display: block;
       }
     }
     @media screen and (min-width:960px){
@@ -126,7 +133,7 @@
 <body>
 <div class="main">
   <nav>
-    <div class="maintitle">
+    <div class="hovedside">
       <a href="https://3beast.github.io/Gruppe-3B/">Systematikere</a>
     </div>
     <div class="nav-links">
