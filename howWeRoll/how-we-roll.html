@@ -65,6 +65,7 @@
             height: max-content;
             padding-top: 200px;
             text-align: center;
+            position: absolute;
 
         }
         /*  Styler form elementet */
@@ -130,8 +131,8 @@
             background-color: whitesmoke;
             color: black;
             width: 100%;
-            height: 150px;
-            padding-top: 75px;
+            bottom: 0;
+            position: absolute;
         }
         /*Når nettleseren blir mindre enn 960px i bredde endrer css til det som er skrevet under*/
         @media screen and (max-width: 960px) {
@@ -237,12 +238,14 @@
         <label for="sons">Flexitid</label><br>
 
         <button id="btn" type="submit">Send inn</button>
+
     </form>
+    <div id="footer">
+        <p>Gruppe 3B</p>
+    </div>
 </div>
 <!-- Footer -->
-<div id="footer">
-    <p>Gruppe 3B</p>
-</div>
+
 
 <script>
     // Kode hentet 04.10.21 fra https://github.com/digitnow/how-we-roll/blob/main/how-we-roll.html
