@@ -36,11 +36,30 @@ kopiere koden i how-we-roll.html i "how-we-roll" branchen og lime den inn i how-
 den beste måten å gjør det på, men vi så ingen annen mulighet.
 
 #Læringsutbytte
+Det vi sitter igjen med etter denne oppgaven er økt kunnskap om html, css og javascript.
+Vi har lært at det er forskjell på buttons, blant annet at button type submit ikke er det samme som button, type button.
+Vi har lært om hvordan webutvikling foregår og hvordan html, css og javascript henger sammen og får nettsiden til å fungere.
+Vi har lært om HTTP (hypertext transfer protocol) og HTTPS (Hypertext transfer protocol, secure) brukes til å
+overføre informasjon mellom klient og tjener
+
+Vi har fått stor innsikt angående form i html. Et en form i html
+kan brukes til å samle inn informasjon som en bruker oppgir ved å interagere med formen. Denne interaksjonen kan foregå på flere måter. Man kan anvende ulike inputs, for eksempel
+kan bruke ulike inputs som text, radio buttons, checkboxes, osv.
+"Inputs" er et av de viktigste aspektene ved form. Dette er som nevnt her brukeren kan interagere og oppgi informasjon, så det er viktig at koden er utformet slik at brukeren kan interagere
+på ønsket måte og vi kan få tak i den informasjonen vi har behov for.
+For eksempel kan en form for input være tekst (text). input type="text" vil angi et tekst-input-område med én linje. 
+Man kan tillegge input-typene ulike attributter. Om vi bruker exempelet (med krokodillemunn, men vi kan ikke bruke det her)
+med "text" videre, 
+kan vi si at vi kan angi attributten "maxlength" for text-området. Om du ville hatt et felt der
+brukeren kunne skrive inn maksimalt 10 bokstaver, kunne dette vært angitt ved input type="text" maxlength="10" (alt legges inni tag)
+
+
 For at alle skulle få maksimalt læringsutbytte ville det ha vært ideelt om alle hadde kodet sin egen oppgave. 
 Men det hadde vi ikke tid til, derfor valgte vi å dele oss opp i tre grupper. 
 En gruppe jobbet på index.html, en annen på how-we-roll.html og en tredje på hwr-report.html. 
-Selv om vi delte oss opp i grupper på 3-3-2, prøvde vi oss alle på "fritiden" de delene vi ikke fikk jobbet på.
+Selv om vi delte oss opp i grupper på 3-3-2, prøvde vi oss alle på "fritiden" de delene vi ikke fikk jobbet på. Et alternativ hadde vært å dele seg i fire (fire på "how-we-roll" og fire på "how-we-roll-report"), og samarbeidet om index.html.
 Om vi skulle gjort oppgaven på nytt, ville vi nok organisert det sånn at alle lagde hver sin oppgave.
+
 
 #Beskrivelser relatert til kode
 Alle kommentarer relatert til koden ligger i html filene.
